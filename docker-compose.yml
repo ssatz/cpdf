@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+
+  pdf:
+    build: ./
+    volumes:
+      - ./:/usr/src/app/
+    environment:
+      - "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
+      - "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
+      - "AWS_REGION=${AWS_S3_REGION}"
+      - "AWS_S3_BUCKET=${AWS_S3_BUCKET}"
+
+  web:
+    image: caddy/caddy:alpine
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    ports:
+      - "90:80"
+    depends_on:
+      - pdf
