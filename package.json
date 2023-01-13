@@ -1,7 +1,7 @@
 {
-    "name": "compress-pdf",
+    "name": "split-pdf",
     "version": "1.0.0",
-    "description": "PDf Manipulation",
+    "description": "PDf Split Manipulation",
     "author": "Sathish kumar <satz@codeplugtech.in>",
     "main": "server.mjs",
     "scripts": {
