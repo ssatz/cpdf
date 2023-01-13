@@ -26,6 +26,6 @@ RUN npm install pm2 -g
 # Bundle app source
 COPY . .
 
-EXPOSE 6499
+EXPOSE 6488
 
 CMD [ "pm2-runtime","--json", "process.yml" ]

@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // Constants
-const PORT = 6499;
+const PORT = 6488;
 const HOST = '0.0.0.0';
 
 // App
